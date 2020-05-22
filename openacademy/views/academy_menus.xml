@@ -1,0 +1,26 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="class_action_window">
+            <field name="name">Academy Class</field>
+            <field name="res_model">academy.class</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="session_action_window">
+            <field name="name">Academy Session</field>
+            <field name="res_model">academy.session</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Academy" id="academy" sequence="110"/>
+
+        <menuitem name="Classes" id="classes"
+                  parent="academy"
+                  action="class_action_window"/>
+
+        <menuitem name="Sessions" id="sessions"
+                  parent="academy"
+                  action="session_action_window"/>
+
+    </data>
+</odoo>
