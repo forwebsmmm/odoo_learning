@@ -76,6 +76,8 @@
                             <field name="isbn"/>
                             <field name="author_ids" widget="many2many_tags"/>
                             <field name="editor_ids" widget="many2many_tags"/>
+                            <field name="history"/>
+                            <field name="customer_id"/>
                         </group>
                     </group>
                 </form>
@@ -104,6 +106,7 @@
                             <field name="surname"/>
                             <field name="address"/>
                             <field name="email"/>
+                            <field name="book_ids" widget="many2many_tags"/>
                         </group>
                     </group>
                 </form>
@@ -116,8 +119,9 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="book_id"/>
-                    <field name="date"/>
-                    <field name="inlib"/>
+                    <field name="date_out"/>
+                    <field name="date_in"/>
+<!--                    <field name="inlib"/>-->
                     <field name="customer_id"/>
                 </tree>
             </field>
