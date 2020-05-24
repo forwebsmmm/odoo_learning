@@ -1,0 +1,56 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="editor_action_window">
+            <field name="name">Editor</field>
+            <field name="res_model">lib.editor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="author_action_window">
+            <field name="name">Author</field>
+            <field name="res_model">lib.author</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="book_action_window">
+            <field name="name">Book</field>
+            <field name="res_model">lib.book</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="customer_action_window">
+            <field name="name">Book</field>
+            <field name="res_model">lib.customer</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="history_action_window">
+            <field name="name">History</field>
+            <field name="res_model">lib.history</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <menuitem name="Library" id="library" sequence="111"/>
+
+        <menuitem name="Books" id="books"
+                  parent="library"
+                  action="book_action_window"/>
+
+        <menuitem name="Editors" id="editors"
+                  parent="library"
+                  action="editor_action_window"/>
+
+        <menuitem name="Authors" id="authors"
+                  parent="library"
+                  action="author_action_window"/>
+
+        <menuitem name="Customers" id="customers"
+                  parent="library"
+                  action="customer_action_window"/>
+
+        <menuitem name="History" id="history"
+                  parent="library"
+                  action="history_action_window"/>
+
+    </data>
+</odoo>

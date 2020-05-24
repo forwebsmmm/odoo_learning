@@ -1,0 +1,6 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_lib_author,lib.author,model_lib_author,base.group_user,1,1,1,1
+access_lib_editor,lib.editor,model_lib_editor,base.group_user,1,1,1,1
+access_lib_book,lib.book,model_lib_book,base.group_user,1,1,1,1
+access_lib_customer,lib.customer,model_lib_customer,base.group_user,1,1,1,1
+access_lib_history,lib.history,model_lib_history,base.group_user,1,1,1,1

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="author_view_list">
+            <field name="name">author.view.list</field>
+            <field name="model">lib.author</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="surname"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="author_view_form">
+            <field name="name">author.view.form</field>
+            <field name="model">lib.author</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="surname"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="editor_view_list">
+            <field name="name">editor.view.list</field>
+            <field name="model">lib.editor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="surname"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="editor_view_form">
+            <field name="name">editor.view.form</field>
+            <field name="model">lib.editor</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="surname"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="book_view_list">
+            <field name="name">book.view.list</field>
+            <field name="model">lib.book</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="author_ids" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="book_view_form">
+            <field name="name">book.view.form</field>
+            <field name="model">lib.book</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="year"/>
+                            <field name="isbn"/>
+                            <field name="author_ids" widget="many2many_tags"/>
+                            <field name="editor_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="customer_view_list">
+            <field name="name">customer.view.list</field>
+            <field name="model">lib.customer</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="surname"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="customer_view_form">
+            <field name="name">customer.view.form</field>
+            <field name="model">lib.customer</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="surname"/>
+                            <field name="address"/>
+                            <field name="email"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="history_view_list">
+            <field name="name">history.view.list</field>
+            <field name="model">lib.history</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="book_id"/>
+                    <field name="date"/>
+                    <field name="inlib"/>
+                    <field name="customer_id"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>
