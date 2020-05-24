@@ -1,3 +1,5 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
 access_academy_class,academy.class,model_academy_class,base.group_user,1,1,1,1
 access_academy_session,academy.session,model_academy_session,base.group_user,1,1,1,1
+access_academy_student,academy.student,model_academy_student,base.group_user,1,1,1,1
+access_academy_instructor,academy.instructor,model_academy_instructor,base.group_user,1,1,1,1

@@ -12,6 +12,18 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+        <record model="ir.actions.act_window" id="student_action_window">
+            <field name="name">Academy student</field>
+            <field name="res_model">academy.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="instructor_action_window">
+            <field name="name">Academy Instructor</field>
+            <field name="res_model">academy.instructor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <menuitem name="Academy" id="academy" sequence="110"/>
 
         <menuitem name="Classes" id="classes"
@@ -22,5 +34,12 @@
                   parent="academy"
                   action="session_action_window"/>
 
+        <menuitem name="Students" id="students"
+                  parent="academy"
+                  action="student_action_window"/>
+
+        <menuitem name="Instructors" id="instructors"
+                  parent="academy"
+                  action="instructor_action_window"/>
     </data>
 </odoo>

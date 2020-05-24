@@ -34,7 +34,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
-<!--                    <field name="instructor_id"/>-->
+                    <field name="instructor_id"/>
                     <field name="start_date"/>
                 </tree>
             </field>
@@ -45,18 +45,79 @@
             <field name="model">academy.session</field>
             <field name="arch" type="xml">
                 <form>
+                    <header>
+                        <field name="state"
+                               widget="statusbar"
+                               clickable="True"
+                               statusbar_visible="draft,open"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="instructor_id"/>
+                                <field name="start_date"/>
+                                <field name="class_id"/>
+                            </group>
+                            <group>
+                                <field name="subject"/>
+                                <field name="room_size"/>
+                                <field name="active"/>
+                                <field name="student_ids"
+                                       widget="many2many_tags"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="student_view_list">
+            <field name="name">student.view.list</field>
+            <field name="model">academy.student</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="surname"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="student_view_form">
+            <field name="name">student.view.form</field>
+            <field name="model">academy.student</field>
+            <field name="arch" type="xml">
+                <form>
                     <group>
                         <group>
                             <field name="name"/>
-<!--                            <field name="instructor_id"/>-->
-                            <field name="start_date"/>
-                            <field name="class_id"/>
+                            <field name="surname"/>
                         </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="instructor_view_list">
+            <field name="name">instructor.view.list</field>
+            <field name="model">academy.instructor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="surname"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="instructor_view_form">
+            <field name="name">instructor.view.form</field>
+            <field name="model">academy.instructor</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
                         <group>
-                            <field name="subject"/>
-                            <field name="room_size"/>
-<!--                            <field name="active"/>-->
-<!--                            <field name="student_ids" widget="many2many_tags"/>-->
+                            <field name="name"/>
+                            <field name="surname"/>
                         </group>
                     </group>
                 </form>
